@@ -1,0 +1,5 @@
+export const GET_ALL_COURSE = "GET_ALL_COURSE";
+export const GET_DETAIL_BY_ID = "GET_DETAIL_BY_ID";
+export const GET_COURSE_BY_TYPE = "GET_COURSE_BY_TYPE";
+export const GET_COURSE_BY_COST = "GET_COURSE_BY_COST";
+export const SEARCH_COURSES = "SEARCH_COURSES";

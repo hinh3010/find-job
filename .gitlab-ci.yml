@@ -1,0 +1,32 @@
+# gitlab-runner register --url https://doantheanh172tb:glpat-4XyeoWVuGV_XzRoYrnU9@gitlab.vtechsoft.vn/ --registration-token GR1348941s7aNSRBHDs_sr5cx4wNA
+stages:
+  - deploy
+
+findjobweb:
+  stage: deploy
+  tags:
+    - findjobweb
+  only:
+    - deploy
+  script:
+    # - exits
+    - whoami
+    - groups
+    - cp -r -u * /findjob/findjobweb
+    - cd /findjob/findjobweb
+    - yarn
+    - cd /findjob/findjobweb
+    - git remote set-url origin https://doantheanh172tb:Kzbe6KvAP9HnhNB5Nxbu@gitlab.vtechsoft.vn/findjob/web.git
+    - rm -rf src
+    - git reset --hard
+    - git pull
+# cp /findjob/findjobweb/.env.production /findjob/findjobweb/.env
+    - n exec 16.14.2 yarn
+    - rm -rf build/*
+    - n exec 16.14.2 yarn run build
+    - rm -rf build_production
+    - cp -rf build build_production
+# pm2 delete findjobweb
+# pm2 serve build_production 3301 --spa --name findjobweb
+    - pm2 restart findjobweb
+    - pm2 list

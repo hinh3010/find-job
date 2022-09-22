@@ -1,0 +1,53 @@
+@media only screen and (min-width:1200px) {
+    .notification__container--wide-tablet {
+        display: none !important;
+    }
+
+    .notification__avatar--medium-mobile {
+        display: none !important;
+    }
+
+    .sub-menu-mobile {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width:1199px) and (min-width: 991px) {
+    .notification__container--wide-tablet {
+        display: block !important;
+    }
+
+    .notification__container {
+        display: none !important;
+    }
+
+    .notification__avatar--medium-mobile {
+        display: none !important;
+    }
+
+    .sub-menu-mobile {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width:990px) {
+    .notification__container--wide-tablet {
+        display: none !important;
+    }
+
+    .notification__container {
+        display: none !important;
+    }
+
+    .course-subnav__list {
+        display: none !important;
+    }
+
+    .notification__avatar--medium-mobile {
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {}
+
+@media only screen and (max-width:479px) {}

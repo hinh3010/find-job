@@ -1,0 +1,2 @@
+export const GET_ALL_PROVINE = 'GET_ALL_PROVINE';
+export const GET_ALL_COUNTRY = 'GET_ALL_COUNTRY';
